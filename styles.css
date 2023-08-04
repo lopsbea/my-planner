@@ -1,63 +1,103 @@
 * {
-  margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  min-height: 100vh;
-  max-width: 100vw;
+	margin: 0;
+	font-family: "DM Sans", sans-serif;
+	min-height: 100vh;
+	max-width: 100vw;
 }
 
 body {
-  background-color: #008b8b40;
-  padding: 1rem;
+	background-color: #223939;
+	/* padding: 1rem; */
 }
 
 table {
-  height: fit-content;
-  max-height: 90%;
-  border-radius: 1rem;
-  overflow: hidden;
-  margin: auto;
+	height: fit-content;
+	max-height: 90%;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin: auto;
+	border-collapse: collapse;
+	background: repeating-linear-gradient(
+		45deg,
+		#606dbc,
+		#606dbc 10px,
+		#465298 10px,
+		#465298 20px
+	);
 }
 
 td {
-  width: fit-content;
-  padding: 0.5rem;
-  border: 1px solid rgb(212, 209, 209);
+	width: 120px;
+	padding: 0.5rem;
+	text-align: center;
+	height: 50px;
+	/* border: 1px solid rgb(212, 209, 209); */
 }
-
-.acordar {
-  background-color: rgb(236, 140, 105);
-}
-
-.exercicio {
-  background-color:aquamarine;
-}
-
-.banho {
-  background-color: rgb(197, 158, 106);
-}
-
-.arrumar {
-  background-color: rgb(108, 173, 243);
-}
-
-.duolingo, .estudar, .faculdade {
-  background-color: rgb(230, 195, 106);
-}
-
-.trabalhar {
-  background-color: rgb(179, 219, 118);
-}
-
-.almoço {
-  background-color: violet;
-}
-
-.ir-casa {
-  background-color: rgb(175, 163, 186);
-}
-
 
 th {
-  background-color: beige;
+	background-color: beige;
 }
 
+.bioquim {
+	background-color: burlywood;
+}
+
+.time {
+	background-color: beige;
+	width: fit-content;
+}
+
+.gen-bas {
+	background-color: aquamarine;
+}
+
+.pro-bas {
+	background-color: coral;
+}
+
+.mfc {
+	background-color: crimson;
+}
+
+.biocel {
+	background-color: darkseagreen;
+}
+
+.org-soc {
+	background-color: darkorange;
+}
+
+.shared {
+	background-color: deeppink;
+}
+
+.exe-pro {
+	background-color: greenyellow;
+}
+
+.bioest {
+	background-color: indianred;
+}
+
+.embrio {
+	background-color: chocolate;
+}
+
+.biofis {
+	background-color: darksalmon;
+}
+
+/* .empty {
+	color: white;
+	background: repeating-linear-gradient(
+		45deg,
+		#606dbc,
+		#606dbc 10px,
+		#465298 10px,
+		#465298 20px
+	);
+} */
+
+.sport {
+	background-color: rgb(200, 66, 66);
+}
