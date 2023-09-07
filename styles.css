@@ -6,32 +6,45 @@
 }
 
 body {
-	background-color: #223939;
-	/* padding: 1rem; */
+	background-color: #350713;
 }
 
 table {
-	height: fit-content;
-	max-height: 90%;
+	/* height: 70%; */
+	margin: 1rem;
+	max-height: 80%;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	margin: auto;
 	border-collapse: collapse;
 	background: repeating-linear-gradient(
 		45deg,
-		#606dbc,
-		#606dbc 10px,
-		#465298 10px,
-		#465298 20px
+		#bc6079,
+		#bc6079 10px,
+		#98466b 10px,
+		#98466b 20px
 	);
+}
+
+th,
+.time {
+	border: 1px solid black;
 }
 
 td {
 	width: 120px;
 	padding: 0.5rem;
 	text-align: center;
+	/* height: 50px; */
+}
+
+/* tr {
 	height: 50px;
-	/* border: 1px solid rgb(212, 209, 209); */
+} */
+
+td,
+tr {
+	border: 1px solid black;
 }
 
 th {
@@ -87,17 +100,11 @@ th {
 	background-color: darksalmon;
 }
 
-/* .empty {
-	color: white;
-	background: repeating-linear-gradient(
-		45deg,
-		#606dbc,
-		#606dbc 10px,
-		#465298 10px,
-		#465298 20px
-	);
-} */
-
 .sport {
 	background-color: rgb(200, 66, 66);
+}
+
+.monitoria {
+	color: white;
+	background-color: rgb(47, 42, 42);
 }
