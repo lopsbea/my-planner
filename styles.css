@@ -1,110 +1,111 @@
-* {
-	margin: 0;
-	font-family: "DM Sans", sans-serif;
-	min-height: 100vh;
-	max-width: 100vw;
+html {
+  font-family: "Exo 2", sans-serif;
+  min-height: 100vh;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: #350713;
+  background-color: #350713;
 }
 
-table {
-	/* height: 70%; */
-	margin: 1rem;
-	max-height: 80%;
-	border-radius: 0.5rem;
-	overflow: hidden;
-	margin: auto;
-	border-collapse: collapse;
-	background: repeating-linear-gradient(
-		45deg,
-		#bc6079,
-		#bc6079 10px,
-		#98466b 10px,
-		#98466b 20px
-	);
-}
+/* table {
+  height: 70%;
+  margin: 1rem;
+  max-height: 80%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: auto;
+  border-collapse: collapse;
+  background: repeating-linear-gradient(
+    45deg,
+    #bc6079,
+    #bc6079 10px,
+    #98466b 10px,
+    #98466b 20px
+  );
+} */
 
-th,
+/* th,
 .time {
-	border: 1px solid black;
-}
+  border: 1px solid black;
+} */
 
-td {
-	width: 120px;
-	padding: 0.5rem;
-	text-align: center;
-	/* height: 50px; */
-}
-
+/* td {
+  width: 120px;
+  padding: 0.5rem;
+  text-align: center;
+  /* height: 50px; */
+/* } */
 /* tr {
 	height: 50px;
 } */
 
-td,
+/* td,
 tr {
-	border: 1px solid black;
-}
+  border: 1px solid black;
+} */
 
-th {
-	background-color: beige;
-}
+/* th {
+  background-color: beige;
+} */
 
 .bioquim {
-	background-color: burlywood;
+  background-color: burlywood;
 }
 
 .time {
-	background-color: beige;
-	width: fit-content;
+  background-color: beige;
+  width: fit-content;
 }
 
 .gen-bas {
-	background-color: aquamarine;
+  background-color: aquamarine;
 }
 
 .pro-bas {
-	background-color: coral;
+  background-color: coral;
 }
 
 .mfc {
-	background-color: crimson;
+  background-color: crimson;
 }
 
 .biocel {
-	background-color: darkseagreen;
+  background-color: darkseagreen;
 }
 
 .org-soc {
-	background-color: darkorange;
+  background-color: darkorange;
 }
 
 .shared {
-	background-color: deeppink;
+  background-color: deeppink;
 }
 
 .exe-pro {
-	background-color: greenyellow;
+  background-color: greenyellow;
 }
 
 .bioest {
-	background-color: indianred;
+  background-color: indianred;
 }
 
 .embrio {
-	background-color: chocolate;
+  background-color: chocolate;
 }
 
 .biofis {
-	background-color: darksalmon;
+  background-color: darksalmon;
 }
 
 .sport {
-	background-color: rgb(200, 66, 66);
+  background-color: rgb(200, 66, 66);
 }
 
 .monitoria {
-	color: white;
-	background-color: rgb(47, 42, 42);
+  color: white;
+  background-color: rgb(47, 42, 42);
 }

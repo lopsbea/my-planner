@@ -1,179 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">  
-  <title>Horários</title>
-</head>
-<body>
-  <table>
-    <thead>
-      <th>Horários</th>
-      <th>Segunda</th>
-      <th>Terça</th>
-      <th>Quarta</th>
-      <th>Quinta</th>
-      <th>Sexta</th>     
-    </thead>
-    <tbody>
-      <tr>
-        <td class="time">06:30</td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-        <td class="empty"></td>
-       </tr>
-   <tr>
-    <td class="time">07:30</td>
-    <td class="bioquim">Bioquímica</td>
-    <td class="gen-bas">Genética Básica</td>
-    <td class="pro-bas">Procedimentos Básicos</td>
-    <td class="mfc">Medicina de Família e Comunidade 1</td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="time">08:20</td>
-    <td class="bioquim"></td>
-    <td class="gen-bas"></td>
-    <td class="pro-bas"></td>
-    <td class="mfc"></td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="time">09:10</td>
-    <td class="empty"></td>  
-    <td class="empty"></td>  
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <style type="text/tailwindcss">
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
 
-   </tr>
-   <tr>
-    <td class="time">09:30</td>
-    <td class="bioquim"></td>    
-    <td class="biocel">Biologia Celular</td>    
-    <td class="empty"></td>    
-    <td class="mfc"></td>    
-    <td class="monitoria">Bioestatística - 112</td>    
+      @layer components {
+        tr,
+        th,
+        td {
+          @apply h-20 max-h-20;
+        }
 
-   </tr>
-   <tr>
-    <td class="time">10:20</td>
-    <td class="gen-bas">Genética Básica</td>   
-    <td class="biocel"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
+        td {
+          @apply w-60 border border-neutral-800;
+        }
 
+        .container {
+          @apply flex flex-row justify-between gap-4;
+        }
+      }
 
-   </tr>
-   <tr>
-    <td class="time">11:10</td>
-    <td class="gen-bas"></td>    
-    <td class="monitoria"> 11:20 - Bioquímica</td>    
-    <td class="monitoria">Genética</td>    
-    <td class="monitoria">Bioestatística - 112</td>    
-    <td class="empty"></td>    
+      @layer utilities {
+        .time-morning {
+          @apply text-center text-xl font-bold bg-teal-400 text-neutral-600;
+        }
 
-   </tr>
-   <tr>
-    <td class="time">12:00</td>
-    <td class="empty"></td>  
-    <td class="empty"></td>  
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
+        .time {
+          @apply text-center text-xl font-bold bg-orange-600 text-neutral-300;
+        }
 
-   </tr>
-   <tr>
-    <td class="time">13:30</td>
-    <td class="org-soc">Organização Social 1</td>    
-    <td class="shared">Bioquímica/Biofísica</td>    
-    <td class="exe-pro">Exercício Profissional 1</td>    
-    <td class="shared">Embriologia/Biologia Celular</td>    
-    <td class="bioest">Bioestatística</td>    
-   </tr>
-   <tr>
-    <td class="time">14:20</td>
-    <td class="org-soc"></td>    
-    <td class="shared"></td>    
-    <td class="exe-pro"></td>    
-    <td class="shared"></td>    
-    <td class="bioest"></td>    
-   </tr>
-   <tr>
-    <td class="time">15:10</td>
-    <td class="empty"></td>  
-    <td class="empty"></td>  
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
+        .time-afternoon {
+          @apply text-center text-xl font-bold bg-red-400 text-neutral-600;
+        }
 
-   </tr>
-   <tr>
-    <td class="time">15:30</td>
-    <td class="embrio">Embriologia</td>   
-    <td class="empty"></td>    
-    <td class="exe-pro"></td>    
-    <td class="biofis">Biofísica</td>    
-    <td class="empty"></td>    
-   </tr>
-   <tr>
-    <td class="time">16:20</td>
-    <td class="embrio"></td>    
-    <td class="empty"></td>    
-    <td class="exe-pro"></td>    
-    <td class="biofis"></td>    
-    <td class="empty"></td>    
-   </tr>
-   <tr>
-    <td class="time">17:10</td>
-    <td class="empty"></td>  
-    <td class="empty"></td>  
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
+        .empty-morning {
+          @apply rounded bg-gradient-to-tr from-indigo-500 via-indigo-300 to-indigo-500;
+        }
 
-   </tr>
-   <tr>
-    <td class="time">17:30</td>
-    <td class="monitoria">Embriologia</td>    
-    <td class="sport">Xadrez</td>    
-    <td class="monitoria">17:10 Biologia Celular</td>    
-    <td class="monitoria">Biofísica - 5</td>    
-    <td class="empty"></td>    
-   </tr>
-   <tr>
-    <td class="time">18:00</td>
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-   </tr>
-   <tr>
-    <td class="time">20:50</td>
-    <td class="empty"></td>  
-    <td class="empty"></td>   
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-   </tr>
-   <tr>
-    <td class="time">21:50</td>
-    <td class="empty"></td>  
-    <td class="empty"></td>    
-    <td class="empty"></td>   
-    <td class="empty"></td>    
-    <td class="empty"></td>    
-   </tr>
-    </tbody>
-  </table>
-</body>
+        .empty {
+          @apply rounded bg-gradient-to-tr from-amber-500 via-amber-300 to-amber-500;
+        }
+
+        .empty-afternoon {
+          @apply rounded bg-gradient-to-tr from-pink-500 via-pink-300 to-pink-500;
+        }
+
+        .empty-night {
+          @apply rounded bg-gradient-to-tr from-stone-500 via-stone-300 to-stone-500;
+        }
+
+        .systems {
+          @apply bg-blue-500 text-neutral-100 p-4;
+        }
+
+        .systems-2 {
+          @apply bg-violet-500 text-neutral-100 p-4;
+        }
+
+        .systems-3 {
+          @apply bg-fuchsia-500 text-neutral-100 p-4;
+        }
+
+        .systems-4 {
+          @apply bg-emerald-500 text-neutral-100 p-4;
+        }
+
+        .systems-5 {
+          @apply bg-rose-500 text-neutral-100 p-4;
+        }
+
+        .systems-6 {
+          @apply bg-cyan-500 text-neutral-100 p-4;
+        }
+
+        .systems-7 {
+          @apply bg-lime-500 text-neutral-100 p-4;
+        }
+
+        .neuroscience {
+          @apply bg-green-500 text-neutral-100 p-4;
+        }
+
+        .subject-text {
+          @apply text-center text-xl font-bold;
+        }
+
+        .subject-teachers {
+          @apply text-center text-base font-semibold opacity-75;
+        }
+
+        .subject-category {
+          @apply w-1/4 flex items-center justify-center text-center text-base font-semibold rounded-full border-[3px] border-neutral-100 w-12 h-12;
+        }
+      }
+    </style>
+    <title>Horários</title>
+  </head>
+  <body>
+    <table>
+      <thead class="">
+        <th
+          class="p-4 font-extrabold text-xl bg-stone-500 text-neutral-100 border-2 border-neutral-800"
+        >
+          Horários
+        </th>
+        <th
+          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+        >
+          Segunda
+        </th>
+        <th
+          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+        >
+          Terça
+        </th>
+        <th
+          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+        >
+          Quarta
+        </th>
+        <th
+          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+        >
+          Quinta
+        </th>
+        <th
+          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+        >
+          Sexta
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-morning">06:30</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-morning">07:30</td>
+          <td class="systems">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Aline</h2>
+              </div>
+              <div class="subject-category">T</div>
+            </div>
+          </td>
+          <td class="neuroscience">
+              <div class="container">
+                <div class="flex flex-col text-center justify-center flex-1">
+                  <p class="subject-text">Neurociências</p>
+                  <h2 class="subject-teachers">Marcell</h2>
+                </div>
+                <div class="subject-category">P</div>
+                            </div>
+              </div>
+          </td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-morning">08:20</td>
+          <td class="systems">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Aline</h2>
+              </div>
+              <div class="subject-category">T</div>
+            </div>
+          </td>
+          <td class="neuroscience">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Neurociências</p>
+                <h2 class="subject-teachers">Marcell</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="pro-bas"></td>
+          <td class="mfc"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-morning">09:10</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-morning">09:30</td>
+          <td class="systems">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Aline</h2>
+              </div>
+              <div class="subject-category">T</div>
+            </div>
+          </td>
+          <td class="systems-5">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Camila</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="empty"></td>
+          <td class="mfc"></td>
+          <td class="monitoria">Bioestatística - 112</td>
+        </tr>
+        <tr>
+          <td class="time-morning">10:20</td>
+          <td class="systems-2">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas**</p>
+                <h2 class="subject-teachers">Ana Cláudia</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="systems-5">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Camila</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-morning">11:10</td>
+          <td class="systems-2">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas**</p>
+                <h2 class="subject-teachers">Ana Cláudia</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="empty-morning"></td>
+          <td class="monitoria">Genética</td>
+          <td class="monitoria">Bioestatística - 112</td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">12:00</td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">13:30</td>
+          <td class="systems-3">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Sérgio</h2>
+              </div>
+              <div class="subject-category">CBC</div>
+            </div>
+          </td>
+          <td class="systems-6">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Édson/Camilla</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="exe-pro">Exercício Profissional 1</td>
+          <td class="shared">Embriologia/Biologia Celular</td>
+          <td class="bioest">Bioestatística</td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">14:20</td>
+          <td class="systems-3">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Sérgio</h2>
+              </div>
+              <div class="subject-category">CBC</div>
+            </div>
+          </td>
+          <td class="systems-6">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas</p>
+                <h2 class="subject-teachers">Édson/Camilla</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="exe-pro"></td>
+          <td class="shared"></td>
+          <td class="bioest"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">15:10</td>
+          <td class="systems-4">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas**</p>
+                <h2 class="subject-teachers">Priscila/Marcell</h2>
+              </div>
+              <div class="subject-category">T</div>
+            </div>
+          </td>
+          <td class="systems-7">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas**</p>
+                <h2 class="subject-teachers">Aline/Priscilla</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">15:30</td>
+          <td class="systems-4">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas**</p>
+                <h2 class="subject-teachers">Priscila/Marcell</h2>
+              </div>
+              <div class="subject-category">T</div>
+            </div>
+          </td>
+
+          <td class="systems-7">
+            <div class="container">
+              <div class="flex flex-col text-center justify-center flex-1">
+                <p class="subject-text">Sistemas**</p>
+                <h2 class="subject-teachers">Aline/Priscilla</h2>
+              </div>
+              <div class="subject-category">P</div>
+            </div>
+          </td>
+          <td class="exe-pro"></td>
+          <td class="biofis">Biofísica</td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">16:20</td>
+          <td class="empty-afternoon"></td>
+          <td class="empty-afternoon"></td>
+          <td class="exe-pro"></td>
+          <td class="biofis"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">17:10</td>
+          <td class="empty-afternoon"></td>
+          <td class="empty-afternoon"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">17:30</td>
+          <td class="empty-afternoon"></td>
+          <td class="empty-afternoon"></td>
+          <td class="monitoria">17:10 Biologia Celular</td>
+          <td class="monitoria">Biofísica - 5</td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">18:00</td>
+          <td class="empty-night"></td>
+          <td class="empty-night"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">20:50</td>
+          <td class="empty-night"></td>
+          <td class="empty-night"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">21:50</td>
+          <td class="empty-night"></td>
+          <td class="empty-night"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
