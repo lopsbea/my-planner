@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,105 +23,91 @@
       @tailwind utilities;
 
       @layer components {
+
+        table {
+          @apply h-5/6 bg-gradient-to-tr from-stone-500 via-stone-300 to-stone-500
+        }
+
         tr,
         th,
         td {
-          @apply h-20 max-h-20;
+          @apply h-12 max-h-20;
         }
 
         td,
         th {
-          @apply w-60 border border-neutral-800;
+          @apply w-60 border border-neutral-800 p-0;
         }
 
         .container {
-          @apply flex flex-row justify-between gap-4;
+          @apply flex flex-row justify-between;
+        }
+
+        td {
+          @apply p-1
         }
       }
 
       @layer utilities {
         .time-afternoon {
-          @apply text-center text-xl font-bold bg-teal-400 text-neutral-600;
+          @apply text-center text-lg font-bold bg-teal-400 text-neutral-600;
         }
 
         .time {
-          @apply text-center text-xl font-bold bg-orange-600 text-neutral-300;
+          @apply text-center text-lg font-bold bg-orange-600 text-neutral-300;
         }
 
         .time-afternoon {
-          @apply text-center text-xl font-bold bg-red-400 text-neutral-100;
-        }
-
-        .empty-night {
-          @apply rounded bg-gradient-to-tr from-indigo-500 via-indigo-300 to-indigo-500;
+          @apply text-center text-lg font-bold bg-red-400 text-neutral-100;
         }
 
         .empty {
           @apply rounded bg-gradient-to-tr from-amber-500 via-amber-300 to-amber-500;
         }
 
-        .empty-night {
-          @apply rounded bg-gradient-to-tr from-pink-500 via-pink-300 to-pink-500;
-        }
 
         .empty-night {
-          @apply rounded bg-gradient-to-tr from-stone-500 via-stone-300 to-stone-500;
+          @apply rounded bg-transparent;
         }
 
         .systems {
-          @apply bg-blue-500 text-neutral-100 p-4;
+          @apply bg-blue-500 text-neutral-100;
         }
 
-        .systems-2 {
-          @apply bg-violet-500 text-neutral-100 p-4;
+        .histo {
+          @apply bg-violet-500 text-neutral-100;
         }
 
-        .systems-3 {
-          @apply bg-fuchsia-500 text-neutral-100 p-4;
+        .clinica {
+          @apply bg-fuchsia-500 text-neutral-100;
         }
 
-        .systems-4 {
-          @apply bg-emerald-500 text-neutral-100 p-4;
-        }
-
-        .systems-5 {
-          @apply bg-rose-500 text-neutral-100 p-4;
-        }
-
-        .systems-6 {
-          @apply bg-cyan-500 text-neutral-100 p-4;
-        }
-
-        .systems-7 {
-          @apply bg-lime-500 text-neutral-100 p-4;
-        }
-
-        .systems-8 {
-          @apply bg-purple-500 text-neutral-100 p-4;
-        }
-
-        .systems-9 {
-          @apply bg-[#61a146] text-neutral-100 p-4;
-        }
+        .anato {
+          @apply bg-rose-500 text-neutral-100;
+        }     
 
         .neuroscience {
-          @apply bg-green-500 text-neutral-100 p-4;
+          @apply bg-green-500 text-neutral-100;
         }
 
         .professional-exercise {
-          @apply bg-[#f83c86] text-neutral-100 p-4;
+          @apply bg-[#61a146] text-neutral-100;
         }
 
         .social-organization {
-          @apply bg-[#839dd1] text-neutral-100 p-4;
+          @apply bg-[#839dd1] text-neutral-100;
         }
 
         .mfc {
-          @apply bg-[#1acd81] text-neutral-100 p-4;
+          @apply bg-[#1acd81] text-neutral-100;
         }
 
         .emergency-urgency {
-          @apply bg-[#438e96] text-neutral-100 p-4;
+          @apply bg-[#438e96] text-neutral-100;
+        }
+
+        .training {
+          @apply text-center text-lg font-bold bg-orange-600 text-neutral-300;
         }
 
         .subject-text {
@@ -132,7 +119,11 @@
         }
 
         .subject-category {
-          @apply w-1/4 flex items-center justify-center text-center text-base font-semibold rounded-full border-[3px] border-neutral-100 w-12 h-12;
+          @apply w-1/4 flex items-center justify-center text-center text-base font-semibold  w-12 h-12 rounded-full border-[3px] border-neutral-100;
+        }
+
+        .monitoria {
+          @apply bg-[#2f2a2a] text-neutral-100  text-center text-lg font-bold;
         }
       }
     </style>
@@ -143,81 +134,44 @@
     <table>
       <thead>
         <th
-          class="p-4 font-extrabold text-xl bg-stone-500 text-neutral-100 border-2 border-neutral-800"
+          class="  font-extrabold text-xl bg-stone-500 text-neutral-100 border-2 border-neutral-800"
         >
           Horários
         </th>
         <th
-          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+          class="  font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
         >
           Segunda
         </th>
         <th
-          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+          class="  font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
         >
           Terça
         </th>
         <th
-          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+          class="  font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
         >
           Quarta
         </th>
         <th
-          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+          class="  font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
         >
           Quinta
         </th>
         <th
-          class="p-4 font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
+          class="  font-extrabold text-xl bg-neutral-300 border-2 border-neutral-800"
         >
           Sexta
         </th>
       </thead>
       <tbody>
-        <tr>
-          <td class="time-afternoon">06:30</td>
-          <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
-          </td>
-          <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-                          </p>
-          </td>
-          <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
-          </td>
-          <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
-          </td>
-          <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
-          </td>
-        </tr>
+       
         <tr>
           <td class="time-afternoon">07:30</td>
           <td class="systems">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Fisiologia</p>
                 <h2 class="subject-teachers">Aline</h2>
               </div>
               <div class="subject-category">T</div>
@@ -226,16 +180,16 @@
           <td class="neuroscience">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Neurociências</p>
+                <p class="subject-text">Neurociências</p> 
                 <h2 class="subject-teachers">Marcell</h2>
               </div>
               <div class="subject-category">P</div>
             </div>
           </td>
-          <td class="systems-8">
+          <td class="systems">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Fisiologia</p>
                 <h2 class="subject-teachers">Aline/Priscilla</h2>
               </div>
               <div class="subject-category">P</div>
@@ -244,102 +198,50 @@
           <td class="professional-exercise">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Exercício Professional</p>
+                <p class="subject-text">EP II</p>
                 <h2 class="subject-teachers">Fabíola</h2>
               </div>
               <div class="subject-category">T/P</div>
             </div>
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">08:20</td>
           <td class="systems">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Aline</h2>
-              </div>
-              <div class="subject-category">T</div>
-            </div>
+            
           </td>
           <td class="neuroscience">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Neurociências</p>
-                <h2 class="subject-teachers">Marcell</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+            
           </td>
-          <td class="systems-8">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Aline/Priscilla</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+          <td class="systems">
+           
           </td>
           <td class="professional-exercise">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Exercício Professional</p>
-                <h2 class="subject-teachers">Fabíola</h2>
-              </div>
-              <div class="subject-category">T/P</div>
-            </div>
+            
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">09:10</td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="empty-night">
+           
           </td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="empty-night">
+           
           </td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="empty-night">
+           
           </td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="professional-exercise">
+           
           </td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="empty-night">
+           
           </td>
         </tr>
         <tr>
@@ -347,44 +249,38 @@
           <td class="systems">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Fisiologia</p>
                 <h2 class="subject-teachers">Aline</h2>
               </div>
               <div class="subject-category">T</div>
             </div>
           </td>
-          <td class="systems-5">
+          <td class="anato">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Anatomia</p>
                 <h2 class="subject-teachers">Camila</h2>
               </div>
               <div class="subject-category">P</div>
             </div>
           </td>
-          <td class="systems-2">
+          <td class="histo">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Histologia</p>
                 <h2 class="subject-teachers">Ana Cláudia</h2>
               </div>
               <div class="subject-category">T</div>
             </div>
           </td>
           <td class="professional-exercise">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Exercício Professional</p>
-                <h2 class="subject-teachers">Fabíola</h2>
-              </div>
-              <div class="subject-category">T/P</div>
-            </div>
+           
           </td>
-          <td class="systems-9">
+          <td class="anato">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Camila A. Carvalho</h2>
+                <p class="subject-text">Anatomia</p>
+                <h2 class="subject-teachers">Camila</h2>
               </div>
               <div class="subject-category">P</div>
             </div>
@@ -392,173 +288,106 @@
         </tr>
         <tr>
           <td class="time-afternoon">10:20</td>
-          <td class="systems-2">
+          <td class="histo">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas**</p>
+                <p class="subject-text">Histologia**</p>
                 <h2 class="subject-teachers">Ana Cláudia</h2>
               </div>
               <div class="subject-category">P</div>
             </div>
           </td>
-          <td class="systems-5">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Camila</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+          <td class="anato">
+            
           </td>
-          <td class="systems-2">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Ana Cláudia</h2>
-              </div>
-              <div class="subject-category">T</div>
-            </div>
-          </td>
+          <td class="histo">
+            
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
-          <td class="systems-9">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Camila A. Carvalho</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+          <td class="anato">
+            
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">11:10</td>
-          <td class="systems-2">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas**</p>
-                <h2 class="subject-teachers">Ana Cláudia</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+          <td class="histo">
+           
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
           <td class="social-organization">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Organização Social I</p>
+                <p class="subject-text">OS II</p>
                 <h2 class="subject-teachers">Luíz/Marcelo</h2>
               </div>
               <div class="subject-category">T/P</div>
             </div>
           </td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+          <td class="monitoria">
+             <p>Anatomia</p>
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">12:00</td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
-          <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+          <td class="monitoria">
+             <p>Neurociências</p>
           </td>
           <td class="social-organization">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Organização Social I</p>
-                <h2 class="subject-teachers">Luíz/Marcelo</h2>
-              </div>
-              <div class="subject-category">T/P</div>
-            </div>
+           
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">13:30</td>
-          <td class="systems-3">
+          <td class="clinica">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Correlação Clínica</p>
                 <h2 class="subject-teachers">Sérgio</h2>
               </div>
               <div class="subject-category">CBC</div>
             </div>
           </td>
-          <td class="systems-6">
+          <td class="anato">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Anatomia</p>
                 <h2 class="subject-teachers">Edson</h2>
               </div>
-              <div class="subject-category">P</div>
+              <div class="subject-category">P</div> 
             </div>
           </td>
           <td class="mfc">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">M.F.C</p>
+                <p class="subject-text">MFC</p>
                 <h2 class="subject-teachers">Fábio/Luís/Soraya</h2>
               </div>
               <div class="subject-category">T/P</div>
             </div>
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
           <td class="emergency-urgency">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Emergência e Urgência</p>
-                <h2 class="subject-teachers">Juliana/Natasha</h2>
+                <p class="subject-text">UE I</p>
+                <h2 class="subject-teachers">Luis Felipe/Ana Paula</h2>
               </div>
               <div class="subject-category">P</div>
             </div>
@@ -566,88 +395,39 @@
         </tr>
         <tr>
           <td class="time-afternoon">14:20</td>
-          <td class="systems-3">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Sérgio</h2>
-              </div>
-              <div class="subject-category">CBC</div>
-            </div>
+          <td class="clinica">
           </td>
-          <td class="systems-6">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Edson</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+          <td class="anato">
+          
           </td>
           <td class="mfc">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">M.F.C</p>
-                <h2 class="subject-teachers">Fábio/Luís/Soraya</h2>
-              </div>
-              <div class="subject-category">T/P</div>
-            </div>
+            
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
           <td class="emergency-urgency">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Emergência e Urgência</p>
-                <h2 class="subject-teachers">Juliana/Natasha</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+           
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">15:10</td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="empty-night">
+           
           </td>
-          <td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
-          </td><td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
-          </td><td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
-          </td><td class="empty">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              INTERVALO
-            </p>
+          <td class="empty-night">
+           
+          </td><td class="mfc">
+            
+          </td><td class="empty-night">
+           
+          </td><td class="empty-night">
+           
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">15:30</td>
-          <td class="systems-4">
+          <td class="neuroscience">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
                 <p class="subject-text">Neurociências**</p>
@@ -657,23 +437,15 @@
             </div>
           </td>
           <td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
+               
           </td>
           <td class="mfc">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">M.F.C</p>
-                <h2 class="subject-teachers">Fábio/Luís/Soraya</h2>
-              </div>
-              <div class="subject-category">T/P</div>
-            </div>
+            
           </td>
-          <td class="systems-5">
+          <td class="anato">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
+                <p class="subject-text">Anatomia</p>
                 <h2 class="subject-teachers">Camila</h2>
               </div>
               <div class="subject-category">P</div>
@@ -682,8 +454,8 @@
           <td class="emergency-urgency">
             <div class="container">
               <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Emergência e Urgência</p>
-                <h2 class="subject-teachers">Juliana/Natasha</h2>
+                <p class="subject-text">UE I</p>
+                <h2 class="subject-teachers">Luis Felipe/Ana Paula</h2>
               </div>
               <div class="subject-category">T</div>
             </div>
@@ -691,165 +463,61 @@
         </tr>
         <tr>
           <td class="time-afternoon">16:20</td>
-          <td class="systems-4">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Neurociências**</p>
-                <h2 class="subject-teachers">Priscila/Marcell</h2>
-              </div>
-              <div class="subject-category">T</div>
-            </div>
+          <td class="neuroscience">
+            
           </td>
         <td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
+               
           </td>
           <td class="empty-night">
-            <p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p>
+             
           </td>
-          <td class="systems-5">
-            <div class="container">
-              <div class="flex flex-col text-center justify-center flex-1">
-                <p class="subject-text">Sistemas</p>
-                <h2 class="subject-teachers">Camila</h2>
-              </div>
-              <div class="subject-category">P</div>
-            </div>
+          <td class="anato">
+           
           </td>
           <td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
+            
           </td>
         </tr>
         <tr>
           <td class="time-afternoon">17:10</td>
           <td class="empty-night">
+               
+          </td>
+          <td class="monitoria">Histologia</td>
+          <td class="monitoria">17:00 Fisiologia</td>
+          <td class="empty-night"></td>
+          <td class="empty-night"></td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">17:15</td>
+          <td class="training">
             <P
               class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
+            Xadrez</P>
+          </td>
+          <td class="monitoria"></td>
+          <td class="monitoria"></td>
+          <td class="empty-night"></td>
+          <td class="empty-night">
+               
+          </td>
+        </tr>
+        <tr>
+          <td class="time-afternoon">18:30</td>
+          <td class="empty-night">
+          <td class="empty-night">
+               
+          </td><td class="empty-night">
+               
+          </td><td class="empty-night">
+               
           </td>
           <td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td>
-          <td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
+               
           </td>
         </tr>
-        <!-- <tr>
-          <td class="time-afternoon">17:30</td>
-          </td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td></td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td></td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td></td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td></td><td class="empty-night">
-            <P
-              class="text-center text-xl font-bold text-neutral-800 opacity-75">
-            VAGO</P>
-          </td>
-        </tr>
-        <tr>
-          <td class="time-afternoon">18:00</td>
-          <td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td>
-          <td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td>
-        </tr>
-        <tr>
-          <td class="time">20:50</td>
-          <td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td>
-        </tr>
-        <tr>
-          <td class="time">21:50</td>
-          <td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td><td class="empty-night"><p
-              class="text-center text-xl font-bold text-neutral-800 opacity-75"
-            >
-              VAGO
-            </p></td>
-        </tr> -->
+         
       </tbody>
     </table>
   </body>
